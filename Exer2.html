@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.onload = function(){
+            document.getElementById("botao").onclick = function(){
+                quadrado()
+            }
+        }
+        function quadrado(){
+            var valor1 = parseInt(document.getElementById("valor1").value)
+            var valor2 = parseInt(document.getElementById("valor2").value)
+            var valor3 = parseInt(document.getElementById("valor3").value)
+            var quadrado = (valor1+valor2+valor3)*(valor1+valor2+valor3)
+            document.getElementById("resul").value= quadrado
+        }
+
+    </script>
+
+</head>
+<body>
+    <form>
+        
+        
+        Valor: <input type="text" id="valor1"><br>
+        Valor 2: <input type="text" id="valor2"><br>
+        Valor 3: <input type="text" id="valor3"><br>
+        <input type="button" id="botao" value="Calcular"> 
+
+        <input type="text" id="resul">
+    </form>
+</body>
+</html>

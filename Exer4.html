@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            document.getElementById("btn").onclick= function(){
+                var valor = parseInt(document.getElementById("valor").value)
+                if (valor%2==0){
+                    document.getElementById("resul").value = "É PAR"
+                }
+                else{
+                    document.getElementById("resul").value= "É IMPAR"
+                }
+            }
+        }
+    </script>
+    
+</head>
+<body>
+    <form>
+Digite o número: <input type="text" id="valor">
+<input type="button" value="Verificar" id="btn">
+Resultado: <input type="text" id="resul">
+</form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerc1</title>
+    <script> 
+
+        var valores = [];
+        var i = 0;
+        window.onload= function(){
+            document.getElementById("botao").onclick = function(){
+                var valor = parseInt(document.getElementById("valor").value)
+                valores [i]= valor;
+                i++;
+                console.log(valores)
+            }
+            document.getElementById("botao2").onclick = function(){
+                ordenar();
+            }
+           
+        }
+        function ordenar(){
+            for (var j = 0; j < valores.length - 1; j++) {
+            for (var i = 0; i < valores.length - 1; i++) {
+            if (valores[i] > valores[i + 1]) {
+            var temp = valores[i];
+            valores[i] = valores[i + 1];
+            valores[i + 1] = temp;
+        }
+    }
+}
+         document.getElementById("valoresOrdenados").value = valores;   
+        }
+        
+        
+        </script>
+
+</head>
+<body>
+    <form>
+Valor:<input type="text" id="valor" ><br>
+
+
+<input type="button" value="Digitar" id="botao">
+<input type="button" value="Ordenar" id="botao2">
+<br>
+Resultado <input type="text" id="valoresOrdenados">
+
+    </form>
+    
+</body>
+</html>
